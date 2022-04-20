@@ -1,18 +1,16 @@
 {
-  "homepage": "http://rohansinghaswal.me/video_ScreenShare/",
   "name": "video_ScreenShare",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Rohan Singh Aswal <raaswal@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "gh-pages": "^3.2.3",
     "socket.io": "^4.4.1"
   },
   "scripts":{
-    "predeploy":"node server.js",
-    "deploy": "gh-pages -d build"
-  } 
-  
+    "start": "PROD=true node server.js",
+    "postinstall": "cd ./client && yarn"
+  }
 }
