@@ -1,4 +1,5 @@
 {
+  "homepage": "http://cyberReckon.github.io/video_ScreenShare",
   "name": "video_ScreenShare",
   "version": "1.0.0",
   "main": "index.js",
@@ -6,6 +7,11 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.3",
-    "socket.io": "^4.4.1"
+    "gh-pages": "^3.2.3",
+    "socket.io": "^4.4.1",
+  "scripts" :{
+    "predeploy":"node server.js cd ./client yarn start",
+    "deploy": "gh-pages -d build"
+  }  
   }
 }
